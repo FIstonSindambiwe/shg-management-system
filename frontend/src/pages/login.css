@@ -1,0 +1,96 @@
+/* Lamp login: dark room, warm lamp light, glass card, yellow button. */
+.lamp-page {
+  --glow: #fcd34d;
+  --warm: #fbbf24;
+  min-height: 100vh; position: relative; overflow: hidden;
+  display: grid; grid-template-columns: 1fr; place-items: center; gap: 24px; padding: 24px;
+  background: radial-gradient(ellipse at 30% 45%, #2b2615 0%, #141310 45%, #0b0b0a 100%);
+  font-family: "Segoe UI", system-ui, sans-serif; color: #f5f5f4;
+  transition: background .6s;
+}
+.lamp-page.off { background: radial-gradient(ellipse at 30% 45%, #161616 0%, #0c0c0c 60%, #070707 100%); }
+@media (min-width: 900px) { .lamp-page { grid-template-columns: 1fr 1fr; padding: 40px 8vw; } }
+
+.firefly {
+  position: absolute; width: 5px; height: 5px; border-radius: 50%; background: var(--glow);
+  box-shadow: 0 0 10px 3px rgba(252, 211, 77, .55); opacity: 0; pointer-events: none;
+  animation-name: drift; animation-iteration-count: infinite; animation-timing-function: ease-in-out;
+}
+.lamp-page.off .firefly { background: #fde68a; box-shadow: 0 0 12px 4px rgba(253, 230, 138, .8); }
+@keyframes drift {
+  0% { opacity: 0; transform: translate(0, 0); }
+  20% { opacity: .9; }
+  50% { opacity: .5; transform: translate(18px, -26px); }
+  80% { opacity: .9; }
+  100% { opacity: 0; transform: translate(-10px, -52px); }
+}
+
+/* ---- the lamp ---- */
+.lamp-scene { display: none; }
+@media (min-width: 900px) { .lamp-scene { display: flex; justify-content: center; align-items: flex-end; height: 440px; width: 100%; } }
+.lamp { position: relative; width: 320px; height: 440px; }
+.shade {
+  position: absolute; left: 50%; top: 40px; transform: translateX(-50%);
+  width: 130px; height: 44px; border-radius: 70px 70px 10px 10px;
+  background: linear-gradient(#26231c, #0f0e0b); box-shadow: 0 2px 0 #3a3528 inset; z-index: 3;
+}
+.bulb {
+  position: absolute; left: 50%; top: 78px; transform: translateX(-50%);
+  width: 96px; height: 10px; border-radius: 0 0 50% 50%; background: #fff7d6; z-index: 2;
+  box-shadow: 0 0 28px 10px rgba(253, 224, 71, .75);
+  transition: all .4s;
+}
+.beam {
+  position: absolute; left: 50%; top: 84px; transform: translateX(-50%);
+  width: 0; height: 0; border-left: 150px solid transparent; border-right: 150px solid transparent;
+  border-bottom: 330px solid rgba(251, 191, 36, .22); filter: blur(6px); z-index: 1;
+  transition: opacity .5s;
+}
+.beam::after {
+  content: ""; position: absolute; left: -110px; top: 300px; width: 220px; height: 30px; border-radius: 50%;
+  background: radial-gradient(rgba(252, 211, 77, .45), transparent 70%);
+}
+.pole { position: absolute; left: 50%; top: 84px; width: 6px; height: 320px; transform: translateX(-50%);
+  background: linear-gradient(90deg, #1b1a16, #3b3629, #1b1a16); z-index: 2; }
+.base { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); width: 110px; height: 14px;
+  border-radius: 8px; background: linear-gradient(#2f2b21, #0f0e0b); z-index: 2; }
+.chain { position: absolute; left: calc(50% + 40px); top: 78px; width: 12px; height: 70px; padding: 0;
+  background: none; border: 0; cursor: pointer; z-index: 3; }
+.chain::before { content: ""; position: absolute; left: 5px; top: 0; width: 2px; height: 56px; background: #8a7a4f; }
+.bead { position: absolute; left: 1px; bottom: 0; width: 10px; height: 14px; border-radius: 4px; background: #d4a53a; }
+.chain:active { transform: translateY(6px); }
+.lamp-page.off .bulb { background: #3a372d; box-shadow: none; }
+.lamp-page.off .beam { opacity: 0; }
+
+/* ---- the card ---- */
+.lamp-card {
+  position: relative; z-index: 5; width: 100%; max-width: 400px; padding: 34px 30px 26px;
+  border-radius: 22px; background: rgba(38, 36, 31, .72); backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, .08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .55), 0 0 0 1px rgba(252, 211, 77, .04);
+  transition: box-shadow .5s;
+}
+.lamp-page.on .lamp-card { box-shadow: 0 20px 60px rgba(0, 0, 0, .55), 0 0 60px rgba(251, 191, 36, .10); }
+.lamp-card h1 { margin: 0; text-align: center; font-size: 28px; font-weight: 800; letter-spacing: -.3px; }
+.lamp-sub { margin: 6px 0 26px; text-align: center; color: #a8a29e; font-size: 13px; }
+.lamp-field {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding: 0 14px;
+  background: #14130f; border: 1px solid #2e2b23; border-radius: 12px; transition: border-color .2s, box-shadow .2s;
+}
+.lamp-field:focus-within { border-color: var(--warm); box-shadow: 0 0 0 3px rgba(251, 191, 36, .15); }
+.lamp-field .icon svg { width: 18px; height: 18px; fill: none; stroke: #a8a29e; stroke-width: 1.8; display: block; }
+.lamp-field input {
+  flex: 1; background: transparent; border: 0; outline: none; color: #f5f5f4; padding: 14px 0; font-size: 15px;
+}
+.lamp-field input::placeholder { color: #78716c; }
+.lamp-btn {
+  width: 100%; margin-top: 8px; padding: 14px; border: 0; border-radius: 12px; cursor: pointer;
+  background: linear-gradient(#fcd34d, #f5b800); color: #1c1917; font-weight: 800; font-size: 15px;
+  box-shadow: 0 8px 24px rgba(245, 184, 0, .25); transition: transform .1s, filter .2s;
+}
+.lamp-btn:hover { filter: brightness(1.05); }
+.lamp-btn:active { transform: translateY(1px); }
+.lamp-btn:disabled { filter: grayscale(.6) brightness(.7); cursor: default; }
+.lamp-error { color: #fca5a5; font-size: 13px; margin: 4px 0 6px; }
+.lamp-foot { margin: 18px 0 0; text-align: center; font-size: 11px; color: #78716c; letter-spacing: .6px; text-transform: uppercase; }
+.lamp-field input, .lamp-field input:focus { border: 0 !important; outline: none !important; box-shadow: none !important; border-radius: 0; width: auto; }

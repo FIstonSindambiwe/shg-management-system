@@ -1,0 +1,117 @@
+// Every label is Kinyarwanda first, English second: "Imigabane (Shares)".
+// Leaders read the Kinyarwanda word they already use in the sheet; anyone else reads the English.
+export const L = {
+  appName:      { rw: "Ubwizigame bw'itsinda", en: "SHG system" },
+  login:        { rw: "Injira", en: "Log in" },
+  logout:       { rw: "Sohoka", en: "Log out" },
+  username:     { rw: "Izina ry'ukoresha", en: "Username" },
+  password:     { rw: "Ijambo ry'ibanga", en: "Password" },
+  group:        { rw: "Itsinda", en: "Group" },
+  members:      { rw: "Abanyamuryango", en: "Members" },
+  meetings:     { rw: "Inteko", en: "Meetings" },
+  meeting:      { rw: "Inteko", en: "Meeting" },
+  newMeeting:   { rw: "Inteko nshya", en: "New meeting" },
+  date:         { rw: "Itariki", en: "Date" },
+  open:         { rw: "Fungura", en: "Open" },
+  save:         { rw: "Bika", en: "Save" },
+  saving:       { rw: "Birabikwa...", en: "Saving..." },
+  cancel:       { rw: "Hagarika", en: "Cancel" },
+  present:      { rw: "Yaje", en: "Present" },
+  absent:       { rw: "Ntiyaje", en: "Absent" },
+  shares:       { rw: "Imigabane", en: "Shares" },
+  shareCount:   { rw: "Umubare w'imigabane", en: "Number of shares" },
+  ingoboka:     { rw: "Ingoboka", en: "Social fund" },
+  mutuelle:     { rw: "Mituweli", en: "Mutuelle" },
+  fine:         { rw: "Ibihano", en: "Fine" },
+  fines:        { rw: "Ibihano", en: "Fines" },
+  loan:         { rw: "Inguzanyo", en: "Loan" },
+  loans:        { rw: "Inguzanyo", en: "Loans" },
+  repaid:       { rw: "Ayishyuwe", en: "Returned" },
+  interest:     { rw: "Inyungu", en: "Interest" },
+  outstanding:  { rw: "Asigaye", en: "Still owed" },
+  dueDate:      { rw: "Itariki ntarengwa", en: "Due date" },
+  giveLoan:     { rw: "Tanga inguzanyo", en: "Give a loan" },
+  amount:       { rw: "Amafaranga", en: "Amount" },
+  toDate:       { rw: "Byose kugeza ubu", en: "Total so far" },
+  thisMeeting:  { rw: "Iyi nteko", en: "This meeting" },
+  addFine:      { rw: "Ongeraho igihano", en: "Add a fine" },
+  reason:       { rw: "Impamvu", en: "Reason" },
+  paidNow:      { rw: "Yishyuye ubu", en: "Paid now" },
+  fillAll:      { rw: "Uzuza bose", en: "Fill for everyone" },
+  saved:        { rw: "Byabitswe", en: "Saved" },
+  nothingToSave:{ rw: "Nta kintu cyo kubika", en: "Nothing to save" },
+  canBorrow:    { rw: "Yakwaka", en: "Can borrow" },
+  monthClosed:  { rw: "Uku kwezi kwarafunzwe", en: "This month is closed" },
+  loading:      { rw: "Birategurwa...", en: "Loading..." },
+  totals:       { rw: "Igiteranyo", en: "Totals" },
+  livelihood:   { rw: "Imibereho", en: "Livelihood" },
+  groups:       { rw: "Amatsinda", en: "Groups" },
+  newGroup:     { rw: "Itsinda rishya", en: "New group" },
+  groupName:    { rw: "Izina ry'itsinda", en: "Group name" },
+  add:          { rw: "Ongeraho", en: "Add" },
+  addMembers:   { rw: "Ongeraho abanyamuryango", en: "Add members" },
+  oneperline:   { rw: "Umwe ku murongo: IZINA Andi mazina, telefoni", en: "One per line: SURNAME First names, phone" },
+  preview:      { rw: "Reba mbere yo kubika", en: "Check before saving" },
+  firstName:    { rw: "Izina bwite", en: "First name" },
+  lastName:     { rw: "Izina ry'umuryango", en: "Surname" },
+  phone:        { rw: "Telefoni", en: "Phone" },
+  code:         { rw: "Nomero", en: "Code" },
+  noMembers:    { rw: "Nta banyamuryango barandikwa", en: "No members registered yet" },
+  allPresent:   { rw: "Bose baje", en: "All present" },
+  newLoan:      { rw: "Inguzanyo nshya", en: "New loan" },
+  name:         { rw: "Izina", en: "Name" },
+  menu:         { rw: "Ibikubiyemo", en: "Menu" },
+  dashboard:    { rw: "Incamake", en: "Dashboard" },
+  report:       { rw: "Raporo", en: "Report" },
+  downloadPdf:  { rw: "Kuramo PDF", en: "Download PDF" },
+  allGroups:    { rw: "Amatsinda yose", en: "All groups" },
+  wholeYear:    { rw: "Umwaka wose", en: "Whole year" },
+  year:         { rw: "Umwaka", en: "Year" },
+  savingsToDate:{ rw: "Imigabane kugeza ubu", en: "Shares to date" },
+  loansGiven:   { rw: "Inguzanyo zatanzwe", en: "Loans given" },
+  overdue:      { rw: "Zarengeje igihe", en: "Overdue" },
+  manage:       { rw: "Gucunga", en: "Manage" },
+  users:        { rw: "Abakoresha", en: "Users" },
+  leader:       { rw: "Umuyobozi", en: "Leader" },
+  settings:     { rw: "Igenamiterere", en: "Settings" },
+  role:         { rw: "Uruhare", en: "Role" },
+  status:       { rw: "Imimerere", en: "Status" },
+  location:     { rw: "Aho riherereye", en: "Location" },
+  edit:         { rw: "Hindura", en: "Edit" },
+  newLeader:    { rw: "Umuyobozi mushya", en: "New leader" },
+  active:       { rw: "Arakora", en: "Active" },
+  inactive:     { rw: "Ntakora", en: "Inactive" },
+  resetPassword:{ rw: "Hindura ijambo ry'ibanga", en: "Reset password" },
+  expenses:     { rw: "Ibyakoreshejwe", en: "Expenses" },
+};
+
+export const MONTHS = [
+  { rw: "Mutarama", en: "Jan" }, { rw: "Gashyantare", en: "Feb" }, { rw: "Werurwe", en: "Mar" },
+  { rw: "Mata", en: "Apr" }, { rw: "Gicurasi", en: "May" }, { rw: "Kamena", en: "Jun" },
+  { rw: "Nyakanga", en: "Jul" }, { rw: "Kanama", en: "Aug" }, { rw: "Nzeri", en: "Sep" },
+  { rw: "Ukwakira", en: "Oct" }, { rw: "Ugushyingo", en: "Nov" }, { rw: "Ukuboza", en: "Dec" },
+];
+
+export const FINE_REASONS = {
+  LATE_LOAN:       { rw: "Gutinda kwishyura inguzanyo", en: "Late loan" },
+  MISSED_MEETING:  { rw: "Kudatabara mu nteko", en: "Missed meeting" },
+  LATE_TO_MEETING: { rw: "Gutinda mu nteko", en: "Late to meeting" },
+  OTHER:           { rw: "Ikindi", en: "Other" },
+};
+
+export const LOAN_STATUS = {
+  ACTIVE:    { rw: "Irakora", en: "Active" },
+  PARTIAL:   { rw: "Yishyuye igice", en: "Partly returned" },
+  OVERDUE:   { rw: "Yarengeje igihe", en: "Overdue" },
+  PAID:      { rw: "Yarangije", en: "Fully returned" },
+  CANCELLED: { rw: "Yahagaritswe", en: "Cancelled" },
+};
+
+/** "Imigabane (Shares)" */
+export function both(pair) {
+  return pair ? `${pair.rw} (${pair.en})` : "";
+}
+
+export function money(n) {
+  return new Intl.NumberFormat("en-RW").format(Number(n || 0));
+}
